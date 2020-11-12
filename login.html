@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Login</h1>
+<form action="/action_page.php">
+  <label for="Email">Email:</label>
+  <input type="text" id="Email" name="Email"><br>
+  <label for="Password">Password:</label>
+  <input type="password" id="Password" name="Password"><br><br>
+  <input type="submit" value="submit"> 
+  <input type="button" value ="cancel">
+  <script>
+    function ValidateEmail(inputText)
+ {
+ var mailformat = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+ if(inputText.value.match(mailformat))
+ {
+ alert("Valid email address!");
+ document.form1.text1.focus();
+ return true;
+ }
+ else
+ {
+ alert("You have entered an invalid email address!");
+ document.form1.text1.focus();
+ return false;
+ }
+ }
+ 
+ function CheckPassword(inputtxt) 
+ { 
+ var passw=  /^[A-Za-z]\w{7,14}$/;
+ if(inputtxt.value.match(passw)) 
+ { 
+ alert('Correct, try another...')
+ return true;
+ }
+ else
+ { 
+ alert('Wrong...!')
+ return false;
+ }
+ }
+ <a href="registration.html">click here for register</a>
+ 
+ </script>
+</form>
+</body>
+</html>
